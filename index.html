@@ -24,10 +24,10 @@
 
 <body>
 
-    
         <div class="flex items-center justify-center h-full">
             <div class="bg-white text-black rounded-lg shadow-lg p-8 ">
-                <button id="button01" type="button" onclick="openDoor()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-8 px-8 rounded ">Click Me</button>
+                <!-- added transition and active scale for nicer click feel -->
+                <button id="button01" type="button" onclick="openDoor()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-8 px-8 rounded transition-colors duration-150 transform active:scale-100">Click Me</button>
                   
                 
                 <div class="flex flex-col items-center justify-center w-full py-3">
@@ -40,28 +40,39 @@
         </div>
 
         <div class="flex items-center justify-center mt-6">
-          
-
         </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
-		<script>
-			var socket = io();
+        <script>
+            var socket = io();
 
             socket.on('lightOn', function(){
-				const light = document.getElementById("light");
+                const light = document.getElementById("light");
                 light.classList.replace('bg-stone-200', 'bg-yellow-400');
+            });
 
-			});
-
-			socket.on('lightOff', function(){
-				const light = document.getElementById("light");
+            socket.on('lightOff', function(){
+                const light = document.getElementById("light");
                 light.classList.replace('bg-yellow-400','bg-stone-200');
+            });
 
-			});
+            function openDoor() {
+                // emit to server
+                socket.emit('openDoor');
 
-			function openDoor() {
-				socket.emit('openDoor');
-        	}
-		</script>
+                // quick visual feedback: swap bg class and revert shortly
+                const btn = document.getElementById('button01');
+                if (!btn) return;
+                // change to a darker shade immediately
+                btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                btn.classList.add('bg-blue-900');
+
+                // revert after 150ms
+                setTimeout(() => {
+                    btn.classList.remove('bg-blue-900');
+                    btn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                }, 250);
+            };
+        </script>
 </body>
 </html>
