@@ -41,6 +41,8 @@ io.on('connection', (socket) => {
   // Example events
   socket.on('openDoor', () => {
     io.emit('doorEvent');
+
+    console.log('time:', new Date().toLocaleString(),': doorEvent');
   });
 
   socket.on('lightOn', () => {
