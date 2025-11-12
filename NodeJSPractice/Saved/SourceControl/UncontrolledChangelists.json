@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/AJ/Documents/GIT_NodeJSPractice/NodeJSPractice/Content/SocketIO/BP_SocketIOManager.uasset",
+				"C:/Users/AJ/Documents/GIT_NodeJSPractice/NodeJSPractice/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/S0/VZH4J3FQE5DDJD384PDG1L.uasset"
+			]
+		}
+	]
+}
