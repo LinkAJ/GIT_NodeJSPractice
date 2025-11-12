@@ -3580,3 +3580,12 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2025.11.12-14.00.34:315][991]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6208.546387
 [2025.11.12-14.00.34:469][  9]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2025.11.12-14.00.34:469][  9]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6208.690430, Update Interval: 312.475342
+[2025.11.12-14.01.12:126][978]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.12-14.01.12:199][978]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SocketIO/BP_LightButton" FILE="../../../../../../Users/AJ/Documents/GIT_NodeJSPractice/NodeJSPractice/Content/SocketIO/BP_LightButton.uasset" SILENT=true
+[2025.11.12-14.01.12:208][978]LogSavePackage: Moving output files for package: /Game/SocketIO/BP_LightButton
+[2025.11.12-14.01.12:209][978]LogSavePackage: Moving '../../../../../../Users/AJ/Documents/GIT_NodeJSPractice/NodeJSPractice/Saved/BP_LightButtonF20FBC5646029AE6EF12B58AA771498D.tmp' to '../../../../../../Users/AJ/Documents/GIT_NodeJSPractice/NodeJSPractice/Content/SocketIO/BP_LightButton.uasset'
+[2025.11.12-14.01.12:216][978]LogFileHelpers: InternalPromptForCheckoutAndSave took 89 ms (total: 2.08 sec)
+[2025.11.12-14.01.12:219][978]AssetCheck: New page: Asset Save: BP_LightButton
+[2025.11.12-14.01.12:219][978]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/SocketIO/BP_LightButton.BP_LightButton
+[2025.11.12-14.01.12:849][ 13]BlueprintLog: New page: Compile BP_LightButton
+[2025.11.12-14.01.12:884][ 13]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
